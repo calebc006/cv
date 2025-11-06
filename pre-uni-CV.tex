@@ -1,0 +1,134 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{geometry}
+\geometry{margin=0.8in}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{changepage} % For indentation
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}[runin]{\bfseries}{}{0em}{}[.]
+
+% Define an indented section macro
+\newcommand{\indentedsection}[2]{
+  \section*{#1}
+  \vspace{-4pt}
+
+  #2
+}
+
+\newcommand{\entry}[3]{
+  \hspace{1.5em}
+  \begin{minipage}{0.9625\textwidth}
+    \noindent
+    \begin{tabularx}{\textwidth}{@{}>{\bfseries}X@{\hspace{5em}}>{\raggedleft\arraybackslash}p{3cm}@{}}
+      #1 & #2 \\
+    \end{tabularx}
+    \par\vspace{0.1em} % <<--- Ensures vertical glue gets inserted properly
+    \begin{minipage}[t]{\dimexpr\textwidth - 9em\relax}
+      \setlength{\parskip}{0.4em} % Optional for paragraph readability
+      #3
+    \end{minipage}
+    \vspace{4pt}
+  \end{minipage}
+  
+}
+
+% ---------- START OF DOCUMENT ---------- %
+
+\begin{document}
+\begin{center}
+  \textbf{\Large Caleb Chia} \\
+  \vspace{3pt}
+  Aspiring physicist, current national serviceman 
+  \vspace{3pt}
+\end{center}
+\begin{flushright}
+  \texttt{(+65) 8815 2392} \hfill \texttt{calebchia223@gmail.com}\\
+\end{flushright}
+
+\noindent\rule[10pt]{\linewidth}{0.4pt}
+\vspace{-22pt}
+
+
+\indentedsection{About Me}{
+Physics student with experience in academic research and electrical engineering. Multiple olympiad achievements across physics, nuclear science, chemistry, mathematics, and informatics. Experienced in leading technical teams and mentoring students. Currently serving my 2-year national service in the Singapore Armed Forces as an army intelligence specialist. 
+}
+
+\indentedsection{Education}{
+  \entry{Anglo-Chinese School (Independent), Singapore}{2019--2024}
+  {International Baccalaureate Diploma Programme (Nov 2024): 43/45\\
+  Graduated: December 2024} 
+}
+
+
+\indentedsection{Academic Activities}{
+
+  \entry{Singapore Physics Olympiad Training Team}{2024}
+  {Selected for national team, trained at the National University of Singapore. Represented Singapore at the International Nuclear Science Olympiad (INSO 2024) and won a Gold medal.} 
+  
+  \entry{Engineering Intern, BorgWarner}{2024}
+  {Short work attachment in electrical engineering department. Worked on circuit design, SPICE-based simulations, RF-testing and bench-testing of devices (mainly high-power inverters).} 
+
+  \entry{Research Intern, Nanyang Technological University, School of Electrical and Electronic Engineering}{2023--2024}
+  {1-year research attachment aimed at optimizing devices for high-power, high-frequency applications. Final report titled: 
+  \textit{``Surface Passivation with \(Al_2 O_3/SiN \) Bilayer in Advanced Gallium Nitride High Electron Mobility Transistors (HEMTs),"} defended 29 February, 2024.} 
+
+  \entry{Executive Committee, ACS(I) Coding Competition Team}{2023--2024}
+  {Organized and helped develop \textit{Hack@AC 2024}, a national pre-university CTF. Conducted training sessions and represented school in cybersecurity and competitive programming competitions. Explored machine learning on the side.} 
+
+  \entry{Vice-President, ACS(I) Mathematics Competition Team}{2022--2024}
+  {Led internal competitions, mentored juniors and represented school in math competitions. } 
+
+}
+
+\indentedsection{Non-Academic Activities}{
+  \entry{Audio-Visual Director, Bukit Panjang Methodist Church}{2024--Present}
+  {Lead AV technician for youth worship hall. Managed volunteer scheduling, planned system upgrades and mentored junior volunteers.} 
+  
+  \entry{Class Chairperson, ACS(I)}{2024}
+  {Planned and organized class activities. Awarded ACS(I) Pastoral Care Award.} 
+  
+  \entry{Volunteer Chess Teacher, \textit{Project Reperio}}{2023--2024}
+  {Shared my love for the game with Rohingya children as part of a 1-year holistic education program planned by \textit{Project Reperio}, in collaboration with \textit{Cahaya Surya Bakti}.} 
+  
+  \entry{Volunteer Tutor, \textit{Heartfriends Student Care Centre}}{2023}
+  {Managed volunteer scheduling, tutored primary students in math and engaged them with games, as part of a 4-month class project.} 
+}
+
+\indentedsection{Honors \& Awards}{
+  \begin{itemize}[leftmargin=2em]
+    \setlength\itemsep{-4pt}
+    \item Gold Medal, International Nuclear Science Olympiad (2024)
+    \item Gold Medal, Singapore Physics Olympiad (2023)
+    \item Silver Medal, National Olympiad for Informatics (2023)
+    \item Silver Medal, Singapore Chemistry Olympiad (2023)
+    \item Silver Medal, Singapore Mathematical Olympiad (2022--2024)
+    \item Distinction (Most Comprehensive Analysis), Singapore International Mathematical and Computational Challenge (2024)
+    \item Distinction, International Mathematical Modelling Challenge (2024)
+    \item Gold Award, Nanyang Research Programme (2024)
+    \item 3rd Team Placing, Cyberthon (2024)
+    % \item 5th Team Placing, Singapore Physics League (2024)
+    % \item 5th Team Placing, Singapore Chemistry League (2024)
+    \item ACS(I) Dean's List - Physics, Chemistry, Mathematics (2024)
+    \item MOE Engineering and Tech Programme Scholarship (2023)
+    \item ABRSM Piano Grade 8 Certification (2024)
+  \end{itemize}
+}
+
+\indentedsection{Standardized Testing}{
+  \entry{IBDP: 43/45}{November 2024}
+  {HL Physics (7), HL Chemistry (7), HL Mathematics AA (7), SL English A: Lang \& Lit (6), SL Economics (7), SL Chinese B (7)}
+
+  \entry{SAT: 1570/1600}{October 2024}
+  {Math: 800, EBRW: 770}
+
+}
+
+\indentedsection{Other Interests}{
+  Cycling, bouldering, cubing, movies, reading (mainly biographies nowadays)
+}
+
+\end{document}
