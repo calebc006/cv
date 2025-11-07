@@ -7,6 +7,11 @@
 \usepackage{tabularx}
 \usepackage{hyperref}
 \usepackage{changepage} % For indentation
+\usepackage{fancyhdr} % For header and footer
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\renewcommand{\headrulewidth}{0.4pt}
+\rfoot{Updated: November 7, 2025}
 
 \titleformat{\section}{\large\bfseries}{}{0em}{}
 \titleformat{\subsection}[runin]{\bfseries}{}{0em}{}[.]
@@ -15,13 +20,14 @@
 \newcommand{\indentedsection}[2]{
   \section*{#1}
   \vspace{-4pt}
-
-  #2
+  \hspace{1.5em}
+  \begin{minipage}{\dimexpr\textwidth-1.5em}
+    #2
+  \end{minipage}
 }
 
 \newcommand{\entry}[3]{
-  \hspace{1.5em}
-  \begin{minipage}{0.9625\textwidth}
+  \begin{minipage}{\textwidth}
     \noindent
     \begin{tabularx}{\textwidth}{@{}>{\bfseries}X@{\hspace{5em}}>{\raggedleft\arraybackslash}p{3cm}@{}}
       #1 & #2 \\
@@ -31,7 +37,7 @@
       \setlength{\parskip}{0.4em} % Optional for paragraph readability
       #3
     \end{minipage}
-    \vspace{4pt}
+    \vspace{10pt}
   \end{minipage}
   
 }
@@ -54,7 +60,7 @@
 
 
 \indentedsection{About Me}{
-Physics student with experience in academic research and electrical engineering. Multiple olympiad achievements across physics, nuclear science, chemistry, mathematics, and informatics. Experienced in leading technical teams and mentoring students. Currently serving my 2-year national service in the Singapore Armed Forces as an army intelligence specialist. 
+  Physics student with experience in academic research and electrical engineering. Multiple olympiad achievements across physics, nuclear science, chemistry, mathematics, and informatics. Experienced in leading technical teams and mentoring students. Currently serving my 2-year national service in the Singapore Armed Forces as an army intelligence specialist. 
 }
 
 \indentedsection{Education}{
@@ -85,7 +91,7 @@ Physics student with experience in academic research and electrical engineering.
 }
 
 \indentedsection{Non-Academic Activities}{
-  \entry{Audio-Visual Director, Bukit Panjang Methodist Church}{2024--Present}
+  \entry{Audio-Visual Director, Bukit Panjang Methodist Church}{2024--}
   {Lead AV technician for youth worship hall. Managed volunteer scheduling, planned system upgrades and mentored junior volunteers.} 
   
   \entry{Class Chairperson, ACS(I)}{2024}
@@ -99,8 +105,8 @@ Physics student with experience in academic research and electrical engineering.
 }
 
 \indentedsection{Honors \& Awards}{
-  \begin{itemize}[leftmargin=2em]
-    \setlength\itemsep{-4pt}
+  \begin{itemize}[leftmargin=1em]
+    \setlength\itemsep{2pt}
     \item Gold Medal, International Nuclear Science Olympiad (2024)
     \item Gold Medal, Singapore Physics Olympiad (2023)
     \item Silver Medal, National Olympiad for Informatics (2023)
@@ -112,7 +118,7 @@ Physics student with experience in academic research and electrical engineering.
     \item 3rd Team Placing, Cyberthon (2024)
     % \item 5th Team Placing, Singapore Physics League (2024)
     % \item 5th Team Placing, Singapore Chemistry League (2024)
-    \item ACS(I) Dean's List - Physics, Chemistry, Mathematics (2024)
+    \item High School Dean's List - Physics, Chemistry, Mathematics (2024)
     \item MOE Engineering and Tech Programme Scholarship (2023)
     \item ABRSM Piano Grade 8 Certification (2024)
   \end{itemize}
